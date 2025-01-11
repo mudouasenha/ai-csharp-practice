@@ -1,0 +1,12 @@
+﻿services:
+  aicachara.core:
+    image: aicachara.core
+    build:
+      context: .
+      dockerfile: AICachara.Core/Dockerfile
+
+  aicachara.api:
+    image: aicachara.api
+    build:
+      context: .
+      dockerfile: AICachara.API/Dockerfile
