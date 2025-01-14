@@ -7,10 +7,26 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
-builder.Services.AddKernel()
-    .Plugins.AddFromType<InvoicePlugin>(); // Add plugins here
 
-builder.Services.AddOpenAIChatCompletion(builder.Configuration["AI:OpenAI:DeploymentModel"], builder.Configuration["AI:OpenAI:ApiKey"]);
+// More information about kernel building:
+// https://learn.microsoft.com/en-us/semantic-kernel/concepts/kernel?pivots=programming-language-csharp#using-dependency-injection
+builder.Services.AddKernel(); // Add plugins here
+builder.Services.AddSingleton(() => new InvoicePlugin());
+builder.Services.AddSingleton<KernelPluginCollection>((serviceProvider) =>
+[
+    KernelPluginFactory.CreateFromObject(serviceProvider.GetRequiredService<InvoicePlugin>()),
+]);
+builder.Services.AddTransient((serviceProvider)=> {
+    KernelPluginCollection pluginCollection = serviceProvider.GetRequiredService<KernelPluginCollection>();
+    return new Kernel(serviceProvider, pluginCollection);
+});
+
+builder.Services.AddOpenAIChatCompletion(
+    modelId: builder.Configuration["AI:OpenAI:DeploymentModel"], 
+    apiKey: builder.Configuration["AI:OpenAI:ApiKey"],
+    orgId: builder.Configuration["AI:OpenAI:OrganizationId"]
+    //serviceId: "YOUR_SERVICE_ID", // Optional; for targeting specific services within Semantic Kernel
+    );
 
 
 var app = builder.Build();

@@ -12,6 +12,7 @@
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
         <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.0" />
         <PackageReference Include="Microsoft.SemanticKernel" Version="1.33.0" />
+        <PackageReference Include="Microsoft.SemanticKernel.Connectors.OpenAI" Version="1.33.0" />
         <PackageReference Include="Microsoft.SemanticKernel.Plugins.Core" Version="1.33.0-alpha" />
         <PackageReference Include="Scalar.AspNetCore" Version="1.2.76" />
     </ItemGroup>
