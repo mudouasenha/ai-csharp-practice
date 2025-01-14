@@ -1,6 +1,20 @@
-var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
+using Microsoft.Extensions.Configuration;
+using Microsoft.SemanticKernel;
 
-app.MapGet("/", () => "Hello World!");
+var config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
 
-app.Run();
+var builder = Kernel.CreateBuilder();
+
+builder.Services.AddAzureOpenAIChatCompletion(
+    config["DEPLOYMENT_MODEL"],
+    config["AZURE_OPEN_AI_ENDPOINT"],
+    config["AZURE_OPEN_AI_KEY"]
+);
+
+var kernel = builder.Build();
+
+var result = await kernel.InvokePromptAsync("Give me a list of exercises that i can do in the gym");
+
+//app.MapGet("/", () => "Hello World!");
+
+//app.Run();

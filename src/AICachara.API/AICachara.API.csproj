@@ -1,20 +1,30 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
         <TargetFramework>net9.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    </PropertyGroup>
+      <UserSecretsId>03cba1da-bb64-4a2d-a747-2434b29ed626</UserSecretsId>
+  </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0"/>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.0" />
+        <PackageReference Include="Microsoft.SemanticKernel" Version="1.33.0" />
+        <PackageReference Include="Microsoft.SemanticKernel.Plugins.Core" Version="1.33.0-alpha" />
+        <PackageReference Include="Scalar.AspNetCore" Version="1.2.76" />
     </ItemGroup>
 
     <ItemGroup>
       <Content Include="..\.dockerignore">
         <Link>.dockerignore</Link>
       </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Prompts\" />
+      <Folder Include="Prompts\Plugins\Exercise\GetExercise\" />
     </ItemGroup>
 
 </Project>
