@@ -1,0 +1,62 @@
+[
+    {
+        "artist": "The Beatles",
+        "song": "Let It Be",
+        "genre": "Rock"
+    },
+    {
+        "artist": "Michael Jackson",
+        "song": "Thriller",
+        "genre": "Pop"
+    },
+    {
+        "artist": "Eminem",
+        "song": "Lose Yourself",
+        "genre": "Hip Hop"
+    },
+    {
+        "artist": "Taylor Swift",
+        "song": "Shake It Off",
+        "genre": "Pop"
+    },
+    {
+        "artist": "Led Zeppelin",
+        "song": "Stairway to Heaven",
+        "genre": "Rock"
+    },
+    {
+        "artist": "Adele",
+        "song": "Rolling in the Deep",
+        "genre": "Soul"
+    },
+    {
+        "artist": "Drake",
+        "song": "God's Plan",
+        "genre": "Hip Hop"
+    },
+    {
+        "artist": "Beyoncé",
+        "song": "Halo",
+        "genre": "R&B"
+    },
+    {
+        "artist": "Ed Sheeran",
+        "song": "Shape of You",
+        "genre": "Pop"
+    },
+    {
+        "artist": "Queen",
+        "song": "Bohemian Rhapsody",
+        "genre": "Rock"
+    },
+    {
+        "artist": "Bruno Mars",
+        "song": "Uptown Funk",
+        "genre": "Funk"
+    },
+    {
+        "artist": "The Weeknd",
+        "song": "Blinding Lights",
+        "genre": "Synthpop"
+    }
+]

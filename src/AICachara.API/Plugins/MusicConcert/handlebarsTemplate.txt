@@ -1,0 +1,6 @@
+// O PLANO DO KERNEL SUGGESTCONCERT
+{{#if suggestConcert}}
+
+{{else}}
+    
+{{/if}}

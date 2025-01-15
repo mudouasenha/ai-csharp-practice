@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "type": "completion",
+  "description": "Identify the body area of the user's exercise plan",
+  "execution_settings": {
+    "default": {
+      "max_tokens": 1200,
+      "temperature": 0
+    }
+  },
+  "input_variables": [
+    {
+      "name": "input",
+      "description": "Text from the user that contains their desired body area for exercises",
+      "required": true
+    }
+  ]
+}

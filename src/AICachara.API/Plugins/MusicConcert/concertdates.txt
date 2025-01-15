@@ -1,0 +1,58 @@
+[
+    {
+        "artist": "Coldplay",
+        "concerts": [
+            { "location": "London, UK", "date": "5/10/2024" },
+            { "location": "Madrid, Spain", "date": "5/15/2024" },
+            { "location": "Berlin, Germany", "date": "5/20/2024" }
+        ]
+    },
+    {
+        "artist": "Beyoncé",
+        "concerts": [
+            { "location": "New York, USA", "date": "6/5/2024" },
+            { "location": "Paris, France", "date": "6/12/2024" },
+            { "location": "Rome, Italy", "date": "6/18/2024" }
+        ]
+    },
+    {
+        "artist": "Foo Fighters",
+        "concerts": [
+            { "location": "Los Angeles, USA", "date": "7/2/2024" },
+            { "location": "Chicago, USA", "date": "7/8/2024" },
+            { "location": "Austin, USA", "date": "7/15/2024" }
+        ]
+    },
+    {
+        "artist": "Billie Eilish",
+        "concerts": [
+            { "location": "Sydney, Australia", "date": "8/1/2024" },
+            { "location": "Auckland, New Zealand", "date": "8/8/2024" },
+            { "location": "Tokyo, Japan", "date": "8/14/2024" }
+        ]
+    },
+    {
+        "artist": "Ed Sheeran",
+        "concerts": [
+            { "location": "Dublin, Ireland", "date": "9/3/2024" },
+            { "location": "Amsterdam, Netherlands", "date": "9/10/2024" },
+            { "location": "Brussels, Belgium", "date": "9/17/2024" }
+        ]
+    },
+    {
+        "artist": "Kendrick Lamar",
+        "concerts": [
+            { "location": "Atlanta, USA", "date": "10/5/2024" },
+            { "location": "Houston, USA", "date": "10/12/2024" },
+            { "location": "Denver, USA", "date": "10/19/2024" }
+        ]
+    },
+    {
+        "artist": "Imagine Dragons",
+        "concerts": [
+            { "location": "Las Vegas, USA", "date": "11/7/2024" },
+            { "location": "Toronto, Canada", "date": "11/14/2024" },
+            { "location": "Mexico City, Mexico", "date": "11/21/2024" }
+        ]
+    }
+]

@@ -1,0 +1,462 @@
+[
+    {
+        "exercise": "Bench Press",
+        "reps": "8",
+        "sets": "4"
+    },
+    {
+        "exercise": "Squats",
+        "reps": "12",
+        "sets": "6"
+    },
+    {
+        "exercise": "Deadlifts",
+        "reps": "5",
+        "sets": "5"
+    },
+    {
+        "exercise": "Lunges",
+        "reps": "20",
+        "sets": "4"
+    },
+    {
+        "exercise": "Push-Ups",
+        "reps": "15",
+        "sets": "4"
+    },
+    {
+        "exercise": "Pull-Ups",
+        "reps": "10",
+        "sets": "3"
+    },
+    {
+        "exercise": "Bicep Curls",
+        "reps": "12",
+        "sets": "3"
+    },
+    {
+        "exercise": "Tricep Dips",
+        "reps": "10",
+        "sets": "4"
+    },
+    {
+        "exercise": "Overhead Press",
+        "reps": "8",
+        "sets": "4"
+    },
+    {
+        "exercise": "Leg Press",
+        "reps": "10",
+        "sets": "4"
+    },
+    {
+        "exercise": "Calf Raises",
+        "reps": "20",
+        "sets": "4"
+    },
+    {
+        "exercise": "Plank",
+        "reps": "60 seconds",
+        "sets": "3"
+    },
+    {
+        "exercise": "Crunches",
+        "reps": "25",
+        "sets": "3"
+    },
+    {
+        "exercise": "Russian Twists",
+        "reps": "20",
+        "sets": "4"
+    },
+    {
+        "exercise": "Mountain Climbers",
+        "reps": "30",
+        "sets": "3"
+    },
+    {
+        "exercise": "Burpees",
+        "reps": "15",
+        "sets": "4"
+    },
+    {
+        "exercise": "Dumbbell Rows",
+        "reps": "12",
+        "sets": "3"
+    },
+    {
+        "exercise": "Shoulder Shrugs",
+        "reps": "15",
+        "sets": "3"
+    },
+    {
+        "exercise": "Seated Rows",
+        "reps": "10",
+        "sets": "4"
+    },
+    {
+        "exercise": "Lat Pulldowns",
+        "reps": "10",
+        "sets": "4"
+    },
+    {
+        "exercise": "Dumbbell Flyes",
+        "reps": "12",
+        "sets": "3"
+    },
+    {
+        "exercise": "Cable Crossovers",
+        "reps": "12",
+        "sets": "3"
+    },
+    {
+        "exercise": "Incline Bench Press",
+        "reps": "8",
+        "sets": "4"
+    },
+    {
+        "exercise": "Decline Bench Press",
+        "reps": "8",
+        "sets": "4"
+    },
+    {
+        "exercise": "Chest Dips",
+        "reps": "10",
+        "sets": "3"
+    },
+    {
+        "exercise": "Bent-Over Rows",
+        "reps": "10",
+        "sets": "4"
+    },
+    {
+        "exercise": "Reverse Flyes",
+        "reps": "12",
+        "sets": "3"
+    },
+    {
+        "exercise": "Barbell Curls",
+        "reps": "10",
+        "sets": "4"
+    },
+    {
+        "exercise": "Hammer Curls",
+        "reps": "12",
+        "sets": "3"
+    },
+    {
+        "exercise": "Skull Crushers",
+        "reps": "10",
+        "sets": "4"
+    },
+    {
+        "exercise": "Tricep Kickbacks",
+        "reps": "12",
+        "sets": "3"
+    },
+    {
+        "exercise": "Leg Extensions",
+        "reps": "15",
+        "sets": "4"
+    },
+    {
+        "exercise": "Leg Curls",
+        "reps": "15",
+        "sets": "4"
+    },
+    {
+        "exercise": "Glute Bridges",
+        "reps": "20",
+        "sets": "4"
+    },
+    {
+        "exercise": "Hip Thrusts",
+        "reps": "12",
+        "sets": "3"
+    },
+    {
+        "exercise": "Sumo Deadlifts",
+        "reps": "8",
+        "sets": "4"
+    },
+    {
+        "exercise": "Front Squats",
+        "reps": "10",
+        "sets": "4"
+    },
+    {
+        "exercise": "Bulgarian Split Squats",
+        "reps": "12",
+        "sets": "3"
+    },
+    {
+        "exercise": "Box Jumps",
+        "reps": "15",
+        "sets": "4"
+    },
+    {
+        "exercise": "Step-Ups",
+        "reps": "20",
+        "sets": "4"
+    },
+    {
+        "exercise": "Kettlebell Swings",
+        "reps": "15",
+        "sets": "3"
+    },
+    {
+        "exercise": "Battle Ropes",
+        "reps": "30 seconds",
+        "sets": "3"
+    },
+    {
+        "exercise": "Farmer's Walk",
+        "reps": "30 seconds",
+        "sets": "3"
+    },
+    {
+        "exercise": "Dead Hangs",
+        "reps": "30 seconds",
+        "sets": "3"
+    },
+    {
+        "exercise": "Arnold Press",
+        "reps": "10",
+        "sets": "4"
+    },
+    {
+        "exercise": "Chest Press",
+        "reps": "10",
+        "sets": "4"
+    },
+    {
+        "exercise": "Pec Deck",
+        "reps": "12",
+        "sets": "3"
+    },
+    {
+        "exercise": "Preacher Curls",
+        "reps": "10",
+        "sets": "4"
+    },
+    {
+        "exercise": "EZ Bar Curls",
+        "reps": "10",
+        "sets": "4"
+    },
+    {
+        "exercise": "Cable Tricep Extensions",
+        "reps": "12",
+        "sets": "3"
+    },
+    {
+        "exercise": "Goblet Squats",
+        "reps": "15",
+        "sets": "3"
+    },
+    {
+        "exercise": "Donkey Kicks",
+        "reps": "20",
+        "sets": "4"
+    },
+    {
+        "exercise": "Side Plank",
+        "reps": "30 seconds",
+        "sets": "3"
+    },
+    {
+        "exercise": "V-Ups",
+        "reps": "20",
+        "sets": "3"
+    },
+    {
+        "exercise": "Hanging Leg Raises",
+        "reps": "15",
+        "sets": "4"
+    },
+    {
+        "exercise": "Dumbbell Lateral Raises",
+        "reps": "12",
+        "sets": "3"
+    },
+    {
+        "exercise": "Face Pulls",
+        "reps": "12",
+        "sets": "3"
+    },
+    {
+        "exercise": "Incline Dumbbell Curls",
+        "reps": "10",
+        "sets": "4"
+    },
+    {
+        "exercise": "Concentration Curls",
+        "reps": "12",
+        "sets": "3"
+    },
+    {
+        "exercise": "One-Arm Dumbbell Rows",
+        "reps": "12",
+        "sets": "3"
+    },
+    {
+        "exercise": "T-Bar Rows",
+        "reps": "10",
+        "sets": "4"
+    },
+    {
+        "exercise": "Good Mornings",
+        "reps": "12",
+        "sets": "3"
+    },
+    {
+        "exercise": "Romanian Deadlifts",
+        "reps": "10",
+        "sets": "4"
+    },
+    {
+        "exercise": "Snatch",
+        "reps": "5",
+        "sets": "5"
+    },
+    {
+        "exercise": "Clean and Jerk",
+        "reps": "5",
+        "sets": "5"
+    },
+    {
+        "exercise": "Kettlebell Clean",
+        "reps": "10",
+        "sets": "4"
+    },
+    {
+        "exercise": "Windmills",
+        "reps": "10",
+        "sets": "3"
+    },
+    {
+        "exercise": "Turkish Get-Ups",
+        "reps": "5",
+        "sets": "2"
+    },
+    {
+        "exercise": "Zercher Squats",
+        "reps": "8",
+        "sets": "4"
+    },
+    {
+        "exercise": "Overhead Squats",
+        "reps": "8",
+        "sets": "4"
+    },
+    {
+        "exercise": "Kettlebell Snatch",
+        "reps": "8",
+        "sets": "3"
+    },
+    {
+        "exercise": "Incline Dumbbell Press",
+        "reps": "10",
+        "sets": "4"
+    },
+    {
+        "exercise": "Chest Flyes",
+        "reps": "12",
+        "sets": "3"
+    },
+    {
+        "exercise": "Decline Dumbbell Press",
+        "reps": "8",
+        "sets": "4"
+    },
+    {
+        "exercise": "Serratus Crunch",
+        "reps": "25",
+        "sets": "3"
+    },
+    {
+        "exercise": "Hanging Knee Tucks",
+        "reps": "20",
+        "sets": "3"
+    },
+    {
+        "exercise": "Jackknife Sit-Ups",
+        "reps": "20",
+        "sets": "3"
+    },
+    {
+        "exercise": "Swiss Ball Crunches",
+        "reps": "25",
+        "sets": "3"
+    },
+    {
+        "exercise": "Ab Wheel Rollouts",
+        "reps": "12",
+        "sets": "3"
+    },
+    {
+        "exercise": "Kettlebell Deadlifts",
+        "reps": "8",
+        "sets": "4"
+    },
+    {
+        "exercise": "One-Legged Deadlifts",
+        "reps": "12",
+        "sets": "3"
+    },
+    {
+        "exercise": "Cable Woodchoppers",
+        "reps": "15",
+        "sets": "3"
+    },
+    {
+        "exercise": "Med Ball Slams",
+        "reps": "20",
+        "sets": "3"
+    },
+    {
+        "exercise": "Battle Rope Waves",
+        "reps": "30 seconds",
+        "sets": "3"
+    },
+    {
+        "exercise": "Spider Crawls",
+        "reps": "30 seconds",
+        "sets": "3"
+    },
+    {
+        "exercise": "Duck Walks",
+        "reps": "30 seconds",
+        "sets": "3"
+    },
+    {
+        "exercise": "Overhead Carries",
+        "reps": "30 seconds",
+        "sets": "3"
+    },
+    {
+        "exercise": "Suitcase Carries",
+        "reps": "30 seconds",
+        "sets": "3"
+    },
+    {
+        "exercise": "Single-Arm Kettlebell Swings",
+        "reps": "15",
+        "sets": "3"
+    },
+    {
+        "exercise": "Kettlebell Goblet Squats",
+        "reps": "15",
+        "sets": "3"
+    },
+    {
+        "exercise": "Kettlebell Clean and Press",
+        "reps": "10",
+        "sets": "4"
+    },
+    {
+        "exercise": "Kettlebell Windmills",
+        "reps": "10",
+        "sets": "3"
+    }
+]

@@ -1,5 +1,8 @@
 using AICachara.API.Plugins;
+using AICachara.API.Prompts.Plugins.Exercise;
+using AICachara.API.Prompts.Plugins.MusicConcert;
 using Microsoft.SemanticKernel;
+using Microsoft.SemanticKernel.Plugins.Core;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,11 +13,18 @@ builder.Services.AddOpenApi();
 
 // More information about kernel building:
 // https://learn.microsoft.com/en-us/semantic-kernel/concepts/kernel?pivots=programming-language-csharp#using-dependency-injection
-builder.Services.AddKernel(); // Add plugins here
-builder.Services.AddSingleton(() => new InvoicePlugin());
+builder.Services.AddKernel()
+    .Plugins.AddFromPromptDirectory("Prompts"); // not available in Dependency injection
+//builder.Services.AddSingleton<ExerciseLibraryPlugin>();
 builder.Services.AddSingleton<KernelPluginCollection>((serviceProvider) =>
 [
-    KernelPluginFactory.CreateFromObject(serviceProvider.GetRequiredService<InvoicePlugin>()),
+#pragma warning disable SKEXP0050
+    KernelPluginFactory.CreateFromType<ConversationSummaryPlugin>(),
+#pragma warning restore SKEXP0050
+    KernelPluginFactory.CreateFromType<ExerciseLibraryPlugin>(),
+    KernelPluginFactory.CreateFromType<MusicConcertPlugin>(),
+    KernelPluginFactory.CreateFromType<MusicLibraryPlugin>(),
+    //KernelPluginFactory.CreateFromObject(serviceProvider.GetRequiredService<ExerciseLibraryPlugin>()),
 ]);
 builder.Services.AddTransient((serviceProvider)=> {
     KernelPluginCollection pluginCollection = serviceProvider.GetRequiredService<KernelPluginCollection>();
@@ -27,6 +37,7 @@ builder.Services.AddOpenAIChatCompletion(
     orgId: builder.Configuration["AI:OpenAI:OrganizationId"]
     //serviceId: "YOUR_SERVICE_ID", // Optional; for targeting specific services within Semantic Kernel
     );
+
 
 
 var app = builder.Build();

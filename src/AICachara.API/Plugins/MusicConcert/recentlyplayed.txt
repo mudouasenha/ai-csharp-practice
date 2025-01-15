@@ -1,0 +1,7 @@
+[
+    {
+        "artist": "Beyoncé",
+        "song": "Halo",
+        "genre": "R&B"
+    }
+]
