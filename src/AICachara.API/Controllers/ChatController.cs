@@ -11,7 +11,6 @@ namespace AICachara.API.Controllers;
 [Route("[controller]")]
 public class ChatController : ControllerBase
 {
-
     private readonly ILogger<ChatController> _logger;
 
     public ChatController(ILogger<ChatController> logger)
@@ -19,22 +18,22 @@ public class ChatController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet()]
+    [HttpGet]
     [Route("GetWeather")]
     public async Task<IActionResult> Get(Kernel kernel)
     {
         var temp = Random.Shared.Next(-20, 55);
         var result = new WeatherForecast
         (
-            Date: DateOnly.FromDateTime(DateTime.Now),
-            TemperatureC: temp,
-            Summary: await kernel.InvokePromptAsync<string>($"Please provide a short description of the temp {temp} C")
+            DateOnly.FromDateTime(DateTime.Now),
+            temp,
+            await kernel.InvokePromptAsync<string>($"Please provide a short description of the temp {temp} C")
         );
 
         return Ok(result);
     }
-    
-    [HttpGet()]
+
+    [HttpGet]
     [Route("chat")]
     public async Task<IActionResult> Chat(Kernel kernel, [FromQuery] string prompt)
     {
@@ -42,8 +41,8 @@ public class ChatController : ControllerBase
 
         return Ok(response);
     }
-    
-    [HttpGet()]
+
+    [HttpGet]
     [Route("exercises-chathistory")]
     public async Task<IActionResult> ChatHistory(Kernel kernel, [FromQuery] string prompt)
     {
@@ -54,18 +53,21 @@ public class ChatController : ControllerBase
         {
             input = @"I want to build my leg strength. I love barbell exercises and compound exercises.";
         }
-        else input = prompt;
-        
+        else
+        {
+            input = prompt;
+        }
+
         var response = await kernel.InvokeAsync<string>(prompts["SuggestExercises"],
-            new() { { "input", input} });
-        
+            new KernelArguments { { "input", input } });
+
         history.AddUserMessage(input);
         history.AddAssistantMessage(response);
 
         return Ok(response);
     }
-    
-    [HttpGet()]
+
+    [HttpGet]
     [Route("exercises-library")]
     public async Task<IActionResult> ExercisesLibrary(Kernel kernel)
     {
@@ -76,15 +78,15 @@ public class ChatController : ControllerBase
                 {{ExerciseLibraryPlugin.GetRecentExercises}}
 
                 Based on their recent activity, suggest an exercise from the list to do next";
-        
+
         var response = await kernel.InvokePromptAsync<string>(prompt);
         return Ok(response);
     }
-    
-    [HttpGet()]
+
+    [HttpGet]
     [Description("""
-                 Creates and a lists handlebars plans for music concerts and songs suggestion. 
-                 These can be used to either execute the kernel based on each plan, or to be saved 
+                 Creates and a lists handlebars plans for music concerts and songs suggestion.
+                 These can be used to either execute the kernel based on each plan, or to be saved
                  for later in a .txt file, and be used to create a function from Prompt.
                  """)]
     [Route("planners/music-concerts-and-songs-planners")]
@@ -92,16 +94,16 @@ public class ChatController : ControllerBase
     {
         //throw new NotImplementedException();
 #pragma warning disable SKEXP0060
-        var planner = new HandlebarsPlanner(new HandlebarsPlannerOptions() { AllowLoops = true });
-        
-        string location = "Redmond WA USA";
-        string goal =
+        var planner = new HandlebarsPlanner(new HandlebarsPlannerOptions { AllowLoops = true });
+
+        var location = "Redmond WA USA";
+        var goal =
             @$"Based on the user's recently played music, suggest a concert for the user living in {location}";
 
         var concertSuggestionPlan = await planner.CreatePlanAsync(kernel, goal);
 
         var songSuggesterFunction = kernel.CreateFunctionFromPrompt(
-            promptTemplate: @"Based on the user's recently played music:
+            @"Based on the user's recently played music:
                 {{recentlyPlayedSongs}}
                 recommend a song to the user from the music library:
                 {{$musicLibrary}}",
@@ -111,16 +113,16 @@ public class ChatController : ControllerBase
 
         kernel.Plugins.AddFromFunctions("SuggestSongPlugin", [songSuggesterFunction]);
 
-        var songSuggestPlan = await planner.CreatePlanAsync(kernel, @"Suggest a song from the music library to the 
+        var songSuggestPlan = await planner.CreatePlanAsync(kernel, @"Suggest a song from the music library to the
             user based on their recently played songs");
 
         //var response = await concertSuggestionPlan.InvokeAsync(kernel);
         List<HandlebarsPlan> plans = [concertSuggestionPlan, songSuggestPlan];
         return Ok(plans);
-        #pragma warning restore SKEXP0060
+#pragma warning restore SKEXP0060
     }
-    
-    [HttpGet()]
+
+    [HttpGet]
     [Description("""
                  Gets a previously created plan for music concerts suggestion and executes it as a kernel function
                  considering the parameters needed. Before execution, it creates a function from Prompt considering the
@@ -132,7 +134,7 @@ public class ChatController : ControllerBase
         throw new NotImplementedException("Incomplete method, missing the musicLibrary Data, and musicLibraryPlugin");
 #pragma warning disable SKEXP0060
         var songSuggesterFunction = kernel.CreateFunctionFromPrompt(
-            promptTemplate: @"Based on the user's recently played music:
+            @"Based on the user's recently played music:
                 {{recentlyPlayedSongs}}
                 recommend a song to the user from the music library:
                 {{$musicLibrary}}",
@@ -142,25 +144,18 @@ public class ChatController : ControllerBase
 
         kernel.Plugins.AddFromFunctions("SuggestSongPlugin", [songSuggesterFunction]);
 
-        string dir = Directory.GetCurrentDirectory();
-        string template = System.IO.File.ReadAllText($"{dir}/../Plugins/MusicConcert/handlebarsTemplate.txt");
+        var dir = Directory.GetCurrentDirectory();
+        var template = System.IO.File.ReadAllText($"{dir}/../Plugins/MusicConcert/handlebarsTemplate.txt");
 
         var handleBarsPromptFunction = kernel.CreateFunctionFromPrompt(
-            new()
-            {
-                Template = template,
-                TemplateFormat = "handlebars"
-            }, new HandlebarsPromptTemplateFactory()
+            new PromptTemplateConfig { Template = template, TemplateFormat = "handlebars" },
+            new HandlebarsPromptTemplateFactory()
         );
-        
-        string location = "Redmond WA USA";
+
+        var location = "Redmond WA USA";
         var templateResult = await kernel.InvokeAsync(handleBarsPromptFunction,
-            new()
-            {
-                { "location", location },
-                { "suggestConcert", false }
-            });
-        
+            new KernelArguments { { "location", location }, { "suggestConcert", false } });
+
         return Ok(templateResult);
 #pragma warning restore SKEXP0060
     }

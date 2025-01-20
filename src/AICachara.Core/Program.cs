@@ -1,4 +1,3 @@
-using Microsoft.Extensions.Configuration;
 using Microsoft.SemanticKernel;
 
 var config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
