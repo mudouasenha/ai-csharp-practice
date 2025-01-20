@@ -21,6 +21,7 @@ In the end of this project, the application should:
 3. Non-relational database;
 3. React in Next.js;
 4. Typescript;
+5. Consistent coding style with .editorconfig file 
 
 # Project Structure
 
