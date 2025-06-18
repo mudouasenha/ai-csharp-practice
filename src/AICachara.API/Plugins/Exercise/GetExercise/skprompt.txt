@@ -1,9 +1,0 @@
-<message role="system">
-Instructions: Identify the body area the user wants to exercise
-</message>
-<message role="user">
-Can you give me a list of exercises that will help me build my muscles?
-</message>
-<message role="assistant">Of course! Do you have any exercises that you know and love to do? </message>
-
-<message role="user"> {{$input}}</message>

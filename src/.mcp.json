@@ -1,0 +1,42 @@
+{
+  "inputs": [
+    {
+      "id": "github_pat",
+      "description": "GitHub personal access token",
+      "type": "promptString",
+      "password": true
+    }
+  ],
+  "servers": {
+    "github": {
+      "type": "stdio",
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PAT",
+        "ghcr.io/github/github-mcp-server"
+      ],
+      "env": {
+        "GITHUB_PAT": "${input:github_pat}"
+      }
+    },
+    "time": {
+      "type": "stdio",
+      "command": "docker",
+      "args": [ "run", "-i", "--rm", "mcp/time" ]
+    },
+    "cachara": {
+      "type": "stdio",
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "src/AICachara.Infrastructure.MCP/AICachara.Infrastructure.MCP.csproj"
+      ],
+      "env": {}
+    }
+  }
+}

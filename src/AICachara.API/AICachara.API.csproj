@@ -9,74 +9,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0"/>
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.0"/>
-    <PackageReference Include="Microsoft.SemanticKernel" Version="1.33.0"/>
-    <PackageReference Include="Microsoft.SemanticKernel.Connectors.OpenAI" Version="1.33.0"/>
-    <PackageReference Include="Microsoft.SemanticKernel.Planners.Handlebars" Version="1.33.0-preview"/>
-    <PackageReference Include="Microsoft.SemanticKernel.Plugins.Core" Version="1.33.0-alpha"/>
-    <PackageReference Include="Scalar.AspNetCore" Version="1.2.76"/>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.0" />
+    <PackageReference Include="Scalar.AspNetCore" Version="1.2.76" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="..\.dockerignore">
       <Link>.dockerignore</Link>
     </Content>
-    <Content Update="Prompts\Plugins\Exercise\GetExercise\config.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Prompts\Plugins\Exercise\SuggestBodyExercises\config.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Prompts\Plugins\Exercise\SuggestExercise\config.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Prompts\SuggestConcert\config.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Infrastructure\"/>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Prompts\Plugins\Exercise\GetExercise\skprompt.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Prompts\Plugins\Exercise\SuggestBodyExercises\skprompt.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Prompts\Plugins\Exercise\SuggestExercise\skprompt.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Prompts\Plugins\Exercise\ExerciseLibrary\exerciselibrary.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Prompts\Plugins\Exercise\ExerciseLibrary\recentexercises.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Prompts\Plugins\MusicConcert\musiclibrary.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Prompts\Plugins\MusicConcert\concertdates.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Prompts\SuggestConcert\skprompt.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Plugins\MusicConcert\handlebarsTemplate.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Plugins\MusicConcert\recentlyplayed.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Plugins\MusicConcert\musiclibrary.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Plugins\MusicConcert\concertdates.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <Folder Include="Infrastructure\" />
   </ItemGroup>
 
 </Project>
