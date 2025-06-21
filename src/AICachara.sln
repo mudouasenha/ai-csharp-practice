@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{3F86A980-6
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AICachara.Infrastructure.MCPServer", "AICachara.Infrastructure.MCP\AICachara.Infrastructure.MCPServer.csproj", "{162ABCCC-3A93-4ACE-B1A7-1AAEBF082CAA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AICachara.Infrastructure.MCPServer", "AICachara.Infrastructure.MCPServer\AICachara.Infrastructure.MCPServer.csproj", "{FED14E29-0A72-53DC-0F36-75FBA56BBF55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{70F4D2A4-F696-4BE6-910A-E40728314C55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70F4D2A4-F696-4BE6-910A-E40728314C55}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70F4D2A4-F696-4BE6-910A-E40728314C55}.Release|Any CPU.Build.0 = Release|Any CPU
-		{162ABCCC-3A93-4ACE-B1A7-1AAEBF082CAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{162ABCCC-3A93-4ACE-B1A7-1AAEBF082CAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{162ABCCC-3A93-4ACE-B1A7-1AAEBF082CAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{162ABCCC-3A93-4ACE-B1A7-1AAEBF082CAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FED14E29-0A72-53DC-0F36-75FBA56BBF55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FED14E29-0A72-53DC-0F36-75FBA56BBF55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FED14E29-0A72-53DC-0F36-75FBA56BBF55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FED14E29-0A72-53DC-0F36-75FBA56BBF55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
